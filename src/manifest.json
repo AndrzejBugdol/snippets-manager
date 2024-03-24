@@ -1,0 +1,11 @@
+{
+  "name": "Snippets Manager",
+  "description": "Chrome extension for managing snippets",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Snippets Manager"
+  },
+  "permissions": ["storage"]
+}
