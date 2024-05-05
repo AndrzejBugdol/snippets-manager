@@ -7,4 +7,7 @@ export const SnippetSchema = z.object({
   content: z.string(),
 });
 
+export const SnippetsSchema = z.array(SnippetSchema);
+
 export type Snippet = z.infer<typeof SnippetSchema>;
+export type Snippets = Snippet[];

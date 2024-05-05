@@ -1,19 +1,8 @@
-import { SnippetSchema } from '@src/services/zod';
-import { Snippets } from '@src/types';
+import { Snippets, SnippetsSchema } from '@src/services/zod';
 
-import { LOCAL_STORAGE_SNIPPETS_KEY } from '../constants';
+import { saveSnippetsToLS } from './saveToLocalStorage';
 
-export const saveSnippets = (snippetsData: Snippets) => {
-  try {
-    const data = SnippetSchema.parse(snippetsData);
-    chrome.storage.local
-      .set({ [LOCAL_STORAGE_SNIPPETS_KEY]: data })
-      .catch(() => {
-        throw new Error(
-          'Snippets Manager: Failed to save snippets data. Wrong data structure',
-        );
-      });
-  } catch {
-    throw new Error('Snippets Manager: Failed to save snippets data');
-  }
+export const saveSnippets = async (snippetsData: Snippets) => {
+  const data = SnippetsSchema.parse(snippetsData);
+  return await saveSnippetsToLS(data);
 };
