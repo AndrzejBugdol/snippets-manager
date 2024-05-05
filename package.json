@@ -11,14 +11,19 @@
     "build": "tsc && vite build && cp src/manifest.json dist/ && cp src/assets/* dist/assets",
     "preview": "vite preview",
     "lint": "eslint \"{src,apps,libs,test}/**/*.{ts,tsx}\" --fix",
-    "format": "prettier --write \"src/**/*.{ts,tsx}\""
+    "format": "prettier --write \"src/**/*.{ts,tsx}\"",
+    "test": "vitest",
+    "test:cov": "vitest run --coverage",
+    "test:run": "vitest run"
   },
   "dependencies": {
     "@types/lodash": "^4.14.191",
     "axios": "^1.2.2",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "vitest": "^1.6.0",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.206",
