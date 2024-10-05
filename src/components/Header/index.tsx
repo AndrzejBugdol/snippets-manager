@@ -1,28 +1,22 @@
 import { Button, Container, Group, Title } from '@mantine/core';
-import { useState, MouseEvent } from 'react';
+import { MouseEvent } from 'react';
+
+import { Routes, ROUTES } from '@src/context/ROUTES';
+import { useRouterContext } from '@src/context/UseRouterContext';
 
 import styles from './styles.module.css';
 
-const buttons = [
-  { label: 'Snippets' },
-  { label: 'Search' },
-  { label: 'Create' },
-];
-
 export const Header = () => {
-  const [active, setActive] = useState(buttons[0]?.label);
+  const { onChangeTab } = useRouterContext();
 
-  const handleLinkClick = (e: MouseEvent, label: string) => {
+  const handleLinkClick = (e: MouseEvent, label: Routes) => {
     e.preventDefault();
-    setActive(label);
+    onChangeTab(label);
   };
 
-  const items = buttons.map(({ label }) => (
-    <Button
-      key={label}
-      data-active={active === label || undefined}
-      onClick={(e) => handleLinkClick(e, label)}>
-      {label}
+  const items = Object.keys(ROUTES).map((label) => (
+    <Button key={label} onClick={(e) => handleLinkClick(e, label as Routes)}>
+      {label.toLocaleUpperCase()}
     </Button>
   ));
 

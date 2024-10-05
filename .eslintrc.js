@@ -48,6 +48,7 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'error',
+    '@typescript-eslint/no-empty-function': 'off',
     'no-case-declarations': 'off',
     'react/prop-types': 'off',
     'react/display-name': 'off',
