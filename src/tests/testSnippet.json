@@ -4,7 +4,13 @@
       "id": "21f7fadb-913b-49a3-b291-1d6f9c108819",
       "title": "First Snippet",
       "description": "I'm a test snippet",
-      "content": "console.log('Hello World')"
+      "content": "function helloWorld() {console.log('Hello, World!')}"
+    },
+    {
+      "id": "21f7fadb-912b-4923-bsvw-1d6f9c108819",
+      "title": "Second Snippet",
+      "description": "I'm another test snippet",
+      "content": "type Test = {id: string}"
     }
   ],
   "badSnippets": [

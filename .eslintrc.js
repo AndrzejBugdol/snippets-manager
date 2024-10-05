@@ -27,6 +27,7 @@ module.exports = {
     'vite.config.ts',
     'bin/**/*',
     'dist/**/*',
+    '**/*.cjs',
   ],
   rules: {
     '@typescript-eslint/naming-convention': [
