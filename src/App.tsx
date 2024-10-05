@@ -5,8 +5,8 @@ import { useRouterContext } from './context/UseRouterContext';
 
 const App = () => {
   const { selectedTab } = useRouterContext();
-
   const Section = ROUTES[selectedTab];
+
   return (
     <AppContainer>
       <Header />
