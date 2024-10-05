@@ -1,6 +1,6 @@
 import { Card, Title, Badge, Stack } from '@mantine/core';
 
-import { detectLanguage } from '@src/services/highlightJs/detectLanguage';
+import { detectLanguage } from '@src/services/highlightJs';
 import { SnippetType } from '@src/services/zod';
 
 import { Code } from '../Code';

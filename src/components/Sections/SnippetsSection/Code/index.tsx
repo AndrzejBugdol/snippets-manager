@@ -1,6 +1,6 @@
 import { Code as MantineCode } from '@mantine/core';
 
-import { formatSnippet } from '@src/services/prettier/formatSnippet';
+import { formatSnippet } from '@src/services/prettier';
 import { SnippetType } from '@src/services/zod';
 
 type CodeProps = {
