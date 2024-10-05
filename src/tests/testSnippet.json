@@ -7,6 +7,12 @@
       "content": "function helloWorld() {console.log('Hello, World!')}"
     },
     {
+      "id": "21f7fadb-113b-49a3-b291-1d6gskenrg108819",
+      "title": "C# Snippet",
+      "description": "I'm a C# snippet",
+      "content": "using System; namespace MyApplication {class Program{static void Main(string[] args){int myNum = 15;Console.WriteLine(myNum);}}}}"
+    },
+    {
       "id": "21f7fadb-912b-4923-bsvw-1d6f9c108819",
       "title": "Second Snippet",
       "description": "I'm another test snippet",

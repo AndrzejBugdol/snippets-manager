@@ -11,5 +11,9 @@ type CodeProps = {
 export function Code({ content, language }: CodeProps) {
   const formattedCode = formatSnippet(content, language);
 
-  return <MantineCode block>{formattedCode}</MantineCode>;
+  return (
+    <MantineCode block maw={400}>
+      {formattedCode}
+    </MantineCode>
+  );
 }
