@@ -1,8 +1,7 @@
+import { saveSnippets } from '.';
 import { describe, expect, test, vi } from 'vitest';
 
-import { saveSnippets } from '.';
-
-import { Snippets } from '@src/services/zod';
+import { SnippetsType } from '@src/services/zod';
 import { mockedStorage } from '@src/tests/mockedStorage';
 import { snippets, badSnippets } from '@src/tests/testSnippet.json';
 
@@ -14,7 +13,7 @@ describe('saveSnippets tests', () => {
   });
 
   test('saveSnippetsToLS() should set save snippets data into local storage', async () => {
-    const chrome = mockedStorage<Snippets>(snippets);
+    const chrome = mockedStorage<SnippetsType>(snippets);
     const spyGet = vi.spyOn(chrome.storage.local, 'set');
 
     await saveSnippetsToLS(snippets);
@@ -23,7 +22,7 @@ describe('saveSnippets tests', () => {
   });
 
   test('saveSnippets() checks structure of data and saves it to local storage', async () => {
-    const chrome = mockedStorage<Snippets>(snippets);
+    const chrome = mockedStorage<SnippetsType>(snippets);
     const spyGet = vi.spyOn(chrome.storage.local, 'set');
 
     await saveSnippets(snippets);
@@ -36,7 +35,7 @@ describe('saveSnippets tests', () => {
     mockedStorage<unknown>(snippets);
 
     await expect(() =>
-      saveSnippets(badSnippets as Snippets),
+      saveSnippets(badSnippets as SnippetsType),
     ).rejects.toThrowError();
   });
 });
