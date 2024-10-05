@@ -19,6 +19,7 @@
   "dependencies": {
     "@mantine/core": "^7.12.1",
     "@mantine/hooks": "^7.12.1",
+    "@tabler/icons-react": "^3.19.0",
     "@types/lodash": "^4.14.191",
     "axios": "^1.2.2",
     "babel-prettier-parser": "^0.10.8",

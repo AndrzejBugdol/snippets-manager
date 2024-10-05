@@ -5,6 +5,7 @@ export const SnippetSchema = z.object({
   title: z.string().min(3),
   description: z.string().optional(),
   content: z.string(),
+  language: z.string().optional(),
 });
 
 export const SnippetsSchema = z.array(SnippetSchema);

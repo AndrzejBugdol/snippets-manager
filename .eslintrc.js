@@ -60,12 +60,17 @@ module.exports = {
       {
         'newlines-between': 'always',
         groups: [
-          'builtin',
-          'external',
-          'index',
+          ['builtin', 'external', 'index'],
           'internal',
           ['sibling', 'parent'],
           'object',
+        ],
+        pathGroups: [
+          {
+            pattern: '{@,.}/**/*.css',
+            group: 'object',
+            position: 'after',
+          },
         ],
         alphabetize: {
           order: 'asc',

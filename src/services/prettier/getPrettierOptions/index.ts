@@ -5,7 +5,7 @@ import parserCss from 'prettier/parser-postcss';
 import parserTypescript from 'prettier/parser-typescript';
 import parserYaml from 'prettier/parser-yaml';
 
-export const getPrettierOptions = (language: string) => {
+export const getPrettierOptions = (language: string | undefined) => {
   switch (language) {
     case 'javascript':
     case 'js':
