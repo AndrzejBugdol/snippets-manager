@@ -24,9 +24,7 @@ export const Header = () => {
     <header>
       <Container size="md" className={styles.container}>
         <Title>Snippets Manager</Title>
-        <Group gap={5} visibleFrom="xs">
-          {items}
-        </Group>
+        <Group gap={5}>{items}</Group>
       </Container>
     </header>
   );
